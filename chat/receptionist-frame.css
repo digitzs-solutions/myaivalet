@@ -1,0 +1,61 @@
+html, body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: hsl(var(--zen-background));
+  color: hsl(var(--zen-foreground));
+}
+webchat-root, webchat-box {
+  font-family: inherit;
+}
+webchat-root.embedded, webchat-box.chat-box {
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: hsl(var(--zen-background)) !important;
+}
+webchat-box .chat-messages {
+  background: hsl(var(--zen-background)) !important;
+}
+webchat-box .chat-box-footer {
+  padding: 10px 12px !important;
+  border-top: 1px solid hsl(var(--zen-border));
+  background: hsl(var(--zen-background)) !important;
+}
+webchat-box glxy-chat-composer {
+  display: block;
+  border: 1px solid hsl(var(--zen-border));
+  border-radius: 16px;
+  background: hsl(var(--zen-muted) / .45);
+  overflow: hidden;
+}
+webchat-box .composer-textarea {
+  font-family: inherit !important;
+  font-size: 16px !important;
+  color: hsl(var(--zen-foreground)) !important;
+  background: transparent !important;
+}
+webchat-box .composer-wrapper {
+  background: transparent !important;
+}
+webchat-box .composer-textarea:focus-visible {
+  outline-color: hsl(var(--zen-ring));
+}
+webchat-box .empty-state-headline {
+  max-width: 280px;
+  font-family: inherit;
+  font-size: 18px !important;
+  font-weight: 500 !important;
+  letter-spacing: -.03em;
+  color: hsl(var(--zen-foreground));
+}
+webchat-box .embedded-empty-state {
+  gap: 14px !important;
+  padding: 24px;
+  box-sizing: border-box;
+}
+webchat-box .powered-by {
+  display: none !important;
+}
+webchat-box a {
+  color: hsl(var(--zen-primary));
+}

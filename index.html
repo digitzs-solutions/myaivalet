@@ -1,0 +1,61 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Your business deserves its own AI concierge. | MyAIValet</title>
+<meta name="description" content="Paste your website URL and in minutes you'll have a branded companion site with a live voice assistant that answers questions, checks availability, and books guests — 24/7.">
+<link rel="canonical" href="https://myaivalet.getondeets.ai/">
+<meta property="og:type" content="website"><meta property="og:url" content="https://myaivalet.getondeets.ai/">
+<meta property="og:title" content="Your business deserves its own AI concierge."><meta property="og:description" content="Paste your website URL and in minutes you'll have a branded companion site with a live voice assistant that answers questions, checks availability, and books guests — 24/7.">
+<meta property="og:image" content="https://myaivalet.getondeets.ai/og.png"><meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#7c3aed"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--primary:259 94% 60%;--fg:240 2% 9%;--muted:240 1% 42%;--border:240 5% 89%;--input:240 5% 86%;--hero-blue:216 100% 88%;--hero-wash:215 100% 97%;--accent:254 100% 97%;--success:155 54% 34%}
+*{box-sizing:border-box;margin:0}body{font-family:Inter,system-ui,sans-serif;color:hsl(var(--fg));-webkit-font-smoothing:antialiased;min-height:100vh;background:radial-gradient(ellipse at 76% 19%,hsl(var(--hero-blue)/.85),transparent 49%),radial-gradient(ellipse at 5% 5%,hsl(var(--hero-wash)),transparent 40%),#fff}
+main{width:calc(100% - 40px);max-width:720px;margin:0 auto;padding:72px 0 56px;text-align:center}
+.eyebrow{color:hsl(var(--primary));font-size:12px;font-weight:500;letter-spacing:.035em;text-transform:uppercase}
+h1{font-size:clamp(34px,6vw,58px);font-weight:500;letter-spacing:-.04em;line-height:1.1;margin-top:18px;text-wrap:balance}
+.sub{color:hsl(var(--muted));font-size:17px;line-height:1.65;max-width:600px;margin:22px auto 0}
+form{margin:36px auto 0;max-width:540px}label{display:block;font-size:13px;font-weight:500;text-align:left;margin-bottom:8px}
+.cap{display:flex;gap:6px;padding:5px;border:1px solid hsl(var(--input));background:#fff;border-radius:10px;box-shadow:0 16px 56px hsl(242 35% 28%/.08)}
+.cap:focus-within{outline:2px solid hsl(var(--primary)/.35);outline-offset:2px}
+input{flex:1;min-width:0;border:0;outline:0;font:inherit;font-size:16px;padding:12px 14px;background:transparent}
+button{border:0;border-radius:7px;background:hsl(var(--primary));color:#fff;font:inherit;font-weight:600;font-size:15px;padding:12px 18px;cursor:pointer;white-space:nowrap}
+button:hover{background:hsl(259 80% 52%)}button:disabled{opacity:.6}
+.note{color:hsl(var(--muted));font-size:13.5px;margin-top:12px}
+.msg{margin-top:14px;font-size:14.5px;min-height:1.2em}.msg.ok{color:hsl(var(--success))}.msg.err{color:#dc2626}
+.proof{display:inline-block;margin-top:44px;padding:9px 16px;border-radius:999px;background:hsl(var(--accent));color:hsl(259 80% 47%);font-size:14px;font-weight:500}
+.qr{margin:44px auto 0;width:150px;padding:10px;background:#fff;border:1px solid hsl(var(--border));border-radius:12px}.qr img{width:100%;display:block}
+@media(max-width:560px){main{padding-top:48px}.cap{flex-direction:column;padding:6px}button{padding:14px}}
+.row[hidden]{display:none!important}.row{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}.row input{border:1px solid hsl(var(--input));border-radius:10px;background:#fff}
+#zen:not(.open){visibility:hidden}#zen{position:fixed;right:20px;bottom:20px;width:min(400px,calc(100vw - 24px));height:min(640px,calc(100vh - 40px));display:flex;flex-direction:column;background:#fff;border:1px solid hsl(var(--border));border-radius:22px;box-shadow:0 24px 80px hsl(242 35% 28%/.22);overflow:hidden;z-index:50;transform:translateY(24px) scale(.98);opacity:0;pointer-events:none;transition:.25s;text-align:left}
+#zen.open{transform:none;opacity:1;pointer-events:auto}
+.zh{display:flex;gap:12px;align-items:center;padding:14px 16px;background:linear-gradient(135deg,hsl(var(--accent)),#fff);border-bottom:1px solid hsl(var(--border))}
+.zi{width:40px;height:40px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:hsl(var(--primary));color:#fff;font-size:20px}
+.ze{font-size:9px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:hsl(var(--primary))}.zt{font-size:15px;font-weight:500}.zs{font-size:11px;color:hsl(var(--muted))}
+.zx{margin-left:auto;background:transparent;color:hsl(var(--muted));padding:6px 10px;font-size:18px}.zx:hover{background:hsl(var(--accent))}
+#zen-log{flex:1;min-height:0;overflow:auto;padding:14px;display:flex;flex-direction:column;gap:8px}.zb{max-width:85%;padding:9px 12px;border-radius:14px;font-size:14px;line-height:1.45;white-space:pre-wrap}.zb.user{align-self:flex-end;background:hsl(var(--primary));color:#fff}.zb.assistant{align-self:flex-start;background:hsl(240 5% 96%)}.zb.pending{opacity:.6}.zb.err{color:#dc2626}#zen-wave{height:44px;width:100%;display:none}#zen[data-voice=listening] #zen-wave,#zen[data-voice=speaking] #zen-wave,#zen[data-voice=thinking] #zen-wave{display:block}.zc{display:flex;gap:6px;padding:8px 12px;border-top:1px solid hsl(var(--border));margin:0;max-width:none}.zc input{border:1px solid hsl(var(--input));border-radius:10px;font-size:15px;padding:9px 12px}.zc button{padding:9px 14px}
+.zf{display:flex;gap:8px;align-items:center;padding:10px 14px;border-top:1px solid hsl(var(--border));background:hsl(240 5% 98%);font-size:11px;color:hsl(var(--muted))}
+.zm{background:#fff;color:hsl(var(--primary));border:1px solid hsl(var(--border));border-radius:999px;padding:7px 12px;font-size:12px;font-weight:500}.zm.on{background:hsl(var(--primary));color:#fff}
+#zen-launch{position:fixed;right:20px;bottom:20px;z-index:49;border-radius:999px;padding:12px 18px;box-shadow:0 12px 40px hsl(259 94% 60%/.35)}
+.tagline{color:hsl(var(--muted));font-size:14px;font-weight:400;font-style:italic;letter-spacing:.01em;line-height:1.5;max-width:520px;margin:16px auto 0;opacity:.72}</style></head><body><main>
+<p class="eyebrow">MyAIValet</p>
+<h1>Your business deserves its own AI concierge.</h1>
+<p class="tagline">Zen isn't selling calm — it's removing everything that isn't</p>
+<p class="sub">Paste your website URL and in seconds you'll be chatting with an AI valet that already knows your business — then take it live with voice, booking and 24/7 answers.</p>
+<form id="f" novalidate autocomplete="off" data-lpignore="true" data-1p-ignore data-form-type="other"><label for="url">Your website URL</label>
+<div class="cap"><input id="url" name="mav-w" type="url" inputmode="url" autocomplete="off" data-lpignore="true" data-1p-ignore data-form-type="other" autocorrect="off" autocapitalize="off" spellcheck="false" value="" placeholder="https://yourbusiness.com" required><button id="b" type="submit">Meet my AI valet — free</button></div>
+<div class="row" id="step2" hidden><p class="step2t" style="width:100%;text-align:left;font-size:14px;margin:4px 0">Almost there — where should we send your AI valet?</p><input id="nm" name="mav-n" type="text" autocomplete="mav-nofill" data-lpignore="true" data-1p-ignore data-form-type="other" autocorrect="off" autocapitalize="words" spellcheck="false" value="" placeholder="What should we call you?"><input id="em" name="mav-e" type="text" inputmode="email" autocomplete="mav-nofill" data-lpignore="true" data-1p-ignore data-form-type="other" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Where should we send it?" value="" required></div>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><input id="hp" name="company_fax" tabindex="-1" autocomplete="off"></div><p class="note">No credit card. See your AI valet live before you pay anything.</p><p class="msg" id="m" role="status" aria-live="polite"></p></form>
+<div class="qr"><img src="/qr.svg" alt="QR code for https://myaivalet.getondeets.ai/" width="150" height="150"></div><p class="note" style="text-align:center"><a href="tel:+18554389365">Call 855-438-9365</a></p>
+</main>
+<button id="zen-launch" hidden>✦ Open chat</button>
+<section id="zen" aria-hidden="true" aria-labelledby="zen-title" data-voice="idle">
+<header class="zh"><div class="zi">✦</div><div><p class="ze">Your AI valet</p><h2 class="zt" id="zen-title" tabindex="-1">AI Valet</h2><p class="zs" id="zen-sub">Answers only from the website you entered.</p></div><button class="zx" id="zen-close" type="button" aria-label="Minimize chat">–</button></header>
+<div id="zen-log" aria-live="polite"></div>
+<canvas id="zen-wave" aria-hidden="true"></canvas>
+<form id="zen-form" class="zc"><input id="zen-in" autocomplete="off" placeholder="Type a question…" aria-label="Message"><button type="submit">Send</button></form>
+<div class="zf"><button class="zm" id="zen-voice" type="button">🎙 Start voice conversation</button><span id="zen-note"></span></div>
+</section>
+<script src="/chat/voice.js" defer></script>
+<script src="/chat/wave.js" defer></script>
+<script src="/chat/zen.js" defer></script>
+</body></html>

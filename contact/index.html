@@ -1,0 +1,33 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Contact Us | MyAiValet by Get Payments, Inc.</title><meta name="description" content="Contact MyAiValet by Get Payments, Inc."><meta name="theme-color" content="#7c3aed"><link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"><style>:root{--p:#7c3aed;--fg:#17171a;--mu:#5f5f66;--bd:#e3e3e8}*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,sans-serif;color:var(--fg);background:#fafaff;line-height:1.6}
+header,footer{background:#fff;border-bottom:1px solid var(--bd)}header .w,footer .w{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+.w{max-width:1040px;margin:0 auto;padding:18px 20px}.logo{font-weight:700;color:var(--p);text-decoration:none;font-size:1.15rem}nav a{color:var(--mu);margin-left:18px;text-decoration:none}nav a:hover{color:var(--p)}
+footer{border-top:1px solid var(--bd);border-bottom:0;margin-top:48px;font-size:.9rem;color:var(--mu)}footer a{color:var(--mu)}
+h1{font-size:2rem;margin:32px 0 8px}h2{margin-top:32px;font-size:1.25rem}.card{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:24px}
+.grid{display:grid;grid-template-columns:3fr 2fr;gap:24px}@media(max-width:800px){.grid{grid-template-columns:1fr}}
+label{display:block;font-weight:600;font-size:.92rem;margin:14px 0 6px}input[type=text],input[type=email],input[type=tel],textarea{width:100%;padding:11px;border:1px solid var(--bd);border-radius:8px;font:inherit}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:14px}.consent{display:flex;gap:10px;align-items:flex-start;margin-top:16px;padding:14px;border:1px solid var(--bd);border-radius:10px;background:#fcfbff}
+.consent input{margin-top:5px;width:18px;height:18px;flex:none}.consent label{margin:0;font-weight:600}.consent p{margin:4px 0 0;font-size:.85rem;color:var(--mu);font-weight:400}
+a{color:var(--p)}button{margin-top:20px;background:var(--p);color:#fff;border:0;border-radius:10px;padding:13px 22px;font:inherit;font-weight:600;cursor:pointer}
+.ph{background:#fff3cd;padding:0 4px;border-radius:4px}.hl{border-left:4px solid var(--p);padding-left:16px}.muted{color:var(--mu)}#thanks{display:none}</style></head><body>
+<header><div class="w"><a class="logo" href="/">MyAiValet <span style="font-weight:400;color:#5f5f66;font-size:.9rem">by Get Payments, Inc.</span></a><nav><a href="/">Home</a><a href="/contact">Contact</a><a href="/privacy">Privacy Policy</a><a href="/terms">Terms</a></nav></div></header>
+<main class="w"><h1>Contact Us</h1><p class="muted">Have a question about MyAiValet, your AI concierge, or your account? Send us a message and our team will get back to you.</p>
+<div class="grid"><div class="card"><form id="f" novalidate>
+<div class="row"><div><label for="fn">First Name</label><input id="fn" name="first_name" type="text" required autocomplete="given-name"></div><div><label for="ln">Last Name</label><input id="ln" name="last_name" type="text" required autocomplete="family-name"></div></div>
+<label for="em">Email Address</label><input id="em" name="email" type="email" required autocomplete="email">
+<label for="ph">Phone Number</label><input id="ph" name="phone" type="tel" autocomplete="tel" placeholder="(855) 438-9365">
+<label for="msg">Message</label><textarea id="msg" name="message" rows="5"></textarea>
+<div class="consent"><input type="checkbox" id="sms_consent" name="sms_consent" value="yes"><div><label for="sms_consent">I agree to receive text messages (optional)</label>
+<p>By checking this box, I consent to receive text messages from MyAiValet by Get Payments, Inc. at the phone number provided, including appointment and service updates, replies to my inquiries, and occasional promotional messages. Message frequency varies. Message and data rates may apply. Reply STOP to unsubscribe, HELP for help. Consent is not a condition of purchase. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</p></div></div>
+<div class="consent"><input type="checkbox" id="call_consent" name="ai_call_consent" value="yes"><div><label for="call_consent">I agree to receive calls, including AI-assisted calls (optional)</label>
+<p>By checking this box, I consent to receive calls, including AI-assisted or artificial or prerecorded voice calls, from MyAiValet by Get Payments, Inc. at the phone number provided about my inquiry and related services. Consent is not a condition of purchase and can be revoked at any time by telling us during a call, replying STOP to a text, or emailing laura@getondeets.ai. See our <a href="/privacy">Privacy Policy</a> and <a href="/terms">Terms of Service</a>.</p></div></div>
+<button type="submit">Send Message</button></form>
+<div id="thanks"><h2>Thank you!</h2><p>We received your message and will be in touch soon. If you opted in to text messages, you can reply STOP at any time to unsubscribe or HELP for help.</p></div></div>
+<aside class="card"><h2 style="margin-top:0">Contact Information</h2>
+<p><strong>Get Payments, Inc.</strong><br><span class="muted">dba MyAiValet</span></p>
+<h3>Mailing Address</h3><p>100 Wilshire Suite 700<br>Santa Monica, CA 90401</p>
+<h3>Call or Text Us</h3><p><a href="tel:+18554389365">(855) 438-9365</a></p>
+<h3>Email Us</h3><p><a href="mailto:laura@getondeets.ai">laura@getondeets.ai</a><br><span class="muted">We aim to reply within one business day.</span></p></aside></div>
+<script>document.getElementById('f').addEventListener('submit',function(e){e.preventDefault();if(!this.reportValidity())return;this.style.display='none';document.getElementById('thanks').style.display='block';});</script></main>
+<footer><div class="w"><span>&copy; 2026 Get Payments, Inc. (dba MyAiValet). All rights reserved.</span><span><a href="/privacy">Privacy Policy</a> &middot; <a href="/terms">Terms of Service</a> &middot; <a href="/contact">Contact</a></span></div></footer></body></html>

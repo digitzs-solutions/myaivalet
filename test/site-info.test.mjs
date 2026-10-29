@@ -1,0 +1,11 @@
+import assert from 'node:assert'; const { businessNameFrom, domainName } = await import('../api/site-info.js');
+assert.equal(businessNameFrom('<meta property="og:site_name" content="Angie&#39;s Bakery"><title>Home | X</title>', 'angie.com'), "Angie's Bakery");
+assert.equal(businessNameFrom('<title>Angi: Find Local Pros - Home</title>', 'angie.com'), 'Angi: Find Local Pros');
+assert.equal(businessNameFrom('<title>Home | Hummingbird Inn</title>', 'x.com'), 'Hummingbird Inn');
+assert.equal(businessNameFrom('<meta property="og:site_name" content="Fitness Doctors -" />', 'fitnessdoctors.com'), 'Fitness Doctors');
+assert.equal(businessNameFrom('<html></html>', 'www.angie.com'), 'Angie'); assert.equal(domainName('www.a.b'), 'a.b');
+const { default: chat } = await import('../api/chat.js'); const res = { status(c) { this.c = c; return this; }, json(b) { this.b = b; return this; } };
+await chat({ method: 'POST', body: { businessName: 'Angie', siteText: 'Angie bakes sourdough bread every morning from 7am to noon at the shop.', messages: [{ role: 'user', content: 'hi there' }] } }, res);
+assert.match(res.b.reply, /AI Valet for Angie/); assert.ok(!/Meredith/.test(res.b.reply));
+await chat({ method: 'POST', body: { businessName: 'Angie', siteText: 'Angie bakes sourdough bread every morning from 7am to noon at the shop.', messages: [{ role: 'user', content: 'when do you bake bread' }] } }, res);
+assert.match(res.b.reply, /sourdough/); console.log('site-info + chat tests ok');

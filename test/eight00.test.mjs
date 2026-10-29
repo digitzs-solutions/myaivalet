@@ -1,0 +1,13 @@
+import assert from 'node:assert'; import { pushTo800, businessName } from '../lib/eight00.js';
+const calls = []; const mk = (docs) => async (u, o = {}) => { calls.push([o.method || 'GET', u, o.body]);
+  const j = (o.method === 'POST' && u.endsWith('/url')) ? { data: { id: 42 } } : o.method === 'POST' ? { data: {} } : { data: docs, meta: { last_page: 1 } };
+  return { ok: true, status: 200, text: async () => JSON.stringify(j) }; };
+let r = await pushTo800('https://example.com/', 'X', { token: 't', fetchFn: mk([]) });
+assert.deepEqual(r, { ok: true, id: 42, linked: [799] });
+assert.ok(calls.every(c => c[0] === 'GET' || c[0] === 'POST')); assert.ok(calls.some(c => c[1].endsWith('/documents/42/agents') && JSON.parse(c[2]).agentIds[0] === 799));
+const b = JSON.parse(calls.find(c => c[1].endsWith('/url'))[2]); assert.equal(b.recrawlIntervalDays, 7); assert.equal(b.autoRemoveOn404, true);
+calls.length = 0; r = await pushTo800('https://www.example.com', 'X', { token: 't', fetchFn: mk([{ id: 7, url: 'https://example.com/' }]) });
+assert.equal(r.skipped, 'exists'); assert.ok(!calls.some(c => c[0] === 'POST'));
+assert.equal((await pushTo800('https://a.com', 'X', { token: '' })).skipped, 'no_token');
+assert.equal(businessName({ website_host: 'a.com' }), 'a.com');
+console.log('eight00 ok');

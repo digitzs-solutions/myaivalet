@@ -1,0 +1,60 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Meet your AI concierge | MyAIValet</title><meta name="description" content="Paste your website and meet your own MyAIValet concierge in seconds."><meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.svg">
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;background:#fafaf9;color:#1c1917}
+.wrap{max-width:640px;margin:0 auto;padding:40px 20px 60px;text-align:center}
+.light{width:64px;height:64px;margin:0 auto 10px;border-radius:50%;background:radial-gradient(circle,#fde68a 0,#f59e0b 45%,rgba(245,158,11,0) 70%);box-shadow:0 0 50px 18px rgba(251,191,36,.35)}
+.brand{font-weight:700;letter-spacing:.02em;color:#57534e;margin-bottom:28px}
+h1{font-size:clamp(28px,5vw,42px);line-height:1.15;margin:0 0 12px}p.sub{color:#57534e;font-size:18px;margin:0 0 28px}
+form{display:grid;gap:12px;text-align:left}input{width:100%;padding:15px 16px;font-size:16px;border:1px solid #d6d3d1;border-radius:12px;background:#fff}
+input:focus{outline:2px solid #7c3aed;border-color:transparent}button{padding:15px;font-size:16px;font-weight:600;border:0;border-radius:12px;background:#1c1917;color:#fff;cursor:pointer}button:disabled{opacity:.6}
+.err{color:#dc2626;min-height:20px;font-size:14px}.fine{color:#a8a29e;font-size:13px;margin-top:10px}
+#chat{display:none;text-align:left;background:#fff;border:1px solid #e7e5e4;border-radius:18px;box-shadow:0 10px 40px rgba(0,0,0,.06);overflow:hidden}
+.head{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid #f5f5f4}.dot{width:28px;height:28px;border-radius:50%;background:radial-gradient(circle,#fde68a,#f59e0b)}
+.head b{display:block}.head small{color:#78716c}#log{height:420px;overflow-y:auto;padding:16px;display:flex;flex-direction:column;gap:10px}
+.m{max-width:85%;padding:10px 14px;border-radius:14px;white-space:pre-wrap;line-height:1.45;font-size:15px}.a{background:#f5f5f4;align-self:flex-start}.u{background:#7c3aed;color:#fff;align-self:flex-end}
+#chips{display:flex;flex-wrap:wrap;gap:8px;padding:0 16px 12px}.chip{background:#fff;color:#5b21b6;border:1px solid #ddd6fe;border-radius:999px;padding:8px 12px;font-size:14px;font-weight:500}
+#send{display:flex;gap:8px;padding:12px;border-top:1px solid #f5f5f4}#send input{padding:12px}#send button{padding:12px 18px}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#57534e}.consent input{width:auto;margin-top:3px}.story{margin:34px auto 0;max-width:520px;color:#57534e;font-size:15px;line-height:1.55}.story b{color:#1c1917}.src{font-size:12px;color:#a8a29e}.step{font-size:13px;color:#7c3aed;font-weight:600;margin-bottom:8px}
+</style></head><body><div class="wrap">
+<div class="light" aria-hidden="true"></div><div class="brand">MyAIValet</div>
+<div id="s1"><h1>Meet your AI concierge.</h1><p class="sub">Paste your website. In seconds, chat with a concierge that already knows your business.</p>
+<form id="f1" novalidate><input id="url" placeholder="yourbusiness.com" autocomplete="url" required><button id="go1" type="submit">Read my website</button><div class="err" id="err1" role="alert"></div></form>
+<div class="story"><p>In 1905, Main Street lit its first electric streetlights, and shops that stood in the light stayed open after dark. Today, AI answers are the new streetlights. A business AI can't read is standing in a blackout.</p>
+<p><b>17%</b> of US small businesses still have no website <span class="src">(Clutch, 2025)</span>, and <b>76%</b> of people who search nearby on a phone visit a business within a day <span class="src">(Google, 2016)</span>.</p>
+<p>MyAIValet is built for the luminaries who keep Main Street lit.</p></div></div>
+<div id="s2" style="display:none"><div class="step">Step 2 of 3</div><h1 id="h2">Your concierge is ready.</h1><p class="sub">Tell us where to send it so you can share it with your customers.</p>
+<form id="f2" novalidate><div class="row"><input id="fn" placeholder="First name" autocomplete="given-name" required><input id="ln" placeholder="Last name" autocomplete="family-name" required></div>
+<input id="email" type="email" placeholder="you@yourbusiness.com" autocomplete="email" required><input id="phone" type="tel" placeholder="Cell phone" autocomplete="tel" required>
+<label class="consent"><input id="consent" type="checkbox" required><span>Yes, MyAIValet may contact me by email, phone and text (SMS) about my concierge. Message and data rates may apply. Reply STOP to opt out.</span></label>
+<div style="position:absolute;left:-9999px" aria-hidden="true"><input id="hp" name="company_fax" tabindex="-1" autocomplete="off"></div><button id="go2" type="submit">Open my concierge</button><div class="err" id="err2" role="alert"></div></form></div>
+<div id="chat"><div class="head"><div class="dot"></div><div><b id="bn">Your concierge</b><small>MyAIValet concierge · trained on your website</small></div></div>
+<div id="vchat" style="display:none;min-height:460px"></div><div id="demo" style="font-size:12px;color:#a8a29e;padding:6px 16px 0">Demo mode: answers are quoted from your website.</div>
+<div id="log" aria-live="polite"></div><div id="chips"></div><form id="send"><input id="q" placeholder="Ask anything a customer would…" autocomplete="off"><button>Send</button></form></div>
+</div><script src="/capture/capture.js"></script><script>
+const $=id=>document.getElementById(id);let S={},msgs=[],CFG={},V={};fetch('/api/config').then(r=>r.json()).then(j=>CFG=j).catch(()=>{});
+const utm={};for(const[k,v]of new URLSearchParams(location.search))if(k.startsWith('utm_'))utm[k]=v;
+function useVendasta(){return CFG.widgetId&&V.vendasta==='synced';}
+function loadWidget(){const s=document.createElement('script');s.src='https://cdn.apigateway.co/webchat-client..prod/sdk.js';s.defer=true;s.dataset.widgetId=CFG.widgetId;s.dataset.embedMode='embedded';s.dataset.embedTarget='vchat';document.body.appendChild(s);['log','send','demo'].forEach(i=>$(i).style.display='none');$('vchat').style.display='block';}
+function add(role,t){const d=document.createElement('div');d.className='m '+(role==='user'?'u':'a');d.textContent=t;$('log').appendChild(d);$('log').scrollTop=1e9;return d;}
+function ask(t){if(useVendasta()&&window.webchatAPI){window.webchatAPI.fillMessage(t,CFG.widgetId);return;}$('q').value=t;$('send').requestSubmit();}
+async function post(body){const r=await fetch('/api/companion',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(body)});const j=await r.json();if(!r.ok)throw new Error(j.message||'Something went wrong.');return j;}
+$('f1').onsubmit=async e=>{e.preventDefault();$('err1').textContent='';const url=$('url').value.trim();if(!url){$('err1').textContent='Please enter your website.';return;}
+ $('go1').disabled=true;$('go1').textContent='Getting your valet ready…';
+ try{S=await post({step:'read',url});S.url=url;$('s1').style.display='none';$('s2').style.display='block';$('h2').textContent=S.businessName+"'s concierge is ready.";$('fn').focus();}
+ catch(x){$('err1').textContent=x.message;$('go1').disabled=false;$('go1').textContent='Read my website';}};
+$('f2').onsubmit=async e=>{e.preventDefault();const E=$('err2');E.textContent='';const fn=$('fn').value.trim(),ln=$('ln').value.trim(),email=$('email').value.trim(),phone=$('phone').value.trim(),consent=$('consent').checked;
+ if(!fn||!ln){E.textContent='Please enter your first and last name.';return;} if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)){E.textContent='Please enter a valid email address.';return;}
+ const d=phone.replace(/\D/g,'');if(!(d.length===10||(d.length===11&&d[0]==='1')||(phone.startsWith('+')&&d.length>=8&&d.length<=15))){E.textContent='Please enter a valid cell phone number.';return;}
+ if(!consent){E.textContent='Please check the box so we can send your concierge to you.';return;}
+ $('go2').disabled=true;$('go2').textContent='Setting up your concierge…';
+ try{V=await post({step:'lead',url:S.url,firstName:fn,lastName:ln,email,phone,consent,businessName:S.businessName,siteText:S.siteText,ref:document.referrer,utm});
+  window.MyAiValetCapture&&MyAiValetCapture({website:S.url,first_name:fn,last_name:ln,email,phone,company_fax:$('hp').value,method:'form'}).catch(()=>{});$('s2').style.display='none';$('chat').style.display='block';$('bn').textContent=S.businessName+' Concierge';
+  const GREETING="Hi, I'm the AI Valet for {business}. I'd love to, would you like me to share what we do?";const g=GREETING.replace('{business}',S.businessName);add('assistant',g);msgs.push({role:'assistant',content:g});
+  if(useVendasta())loadWidget();else $('q').focus();
+  const sg=(S.suggestions&&S.suggestions.length?S.suggestions:['Ask me about your hours','Ask me about your services']).slice(0,3);sg.forEach(t=>{const c=document.createElement('button');c.type='button';c.className='chip';c.textContent=t;c.onclick=()=>{$('chips').innerHTML='';ask(t.replace(/^Ask me about /,'Tell me about '));};$('chips').appendChild(c);});
+ }catch(x){E.textContent=x.message;$('go2').disabled=false;$('go2').textContent='Open my concierge';}};
+$('send').onsubmit=async e=>{e.preventDefault();const q=$('q').value.trim();if(!q)return;$('q').value='';add('user',q);msgs.push({role:'user',content:q});const t=add('assistant','…');
+ try{const r=await fetch('/api/chat',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({businessName:S.businessName,siteText:S.siteText,messages:msgs})});const j=await r.json();t.textContent=j.reply;msgs.push({role:'assistant',content:j.reply});}catch{t.textContent='Sorry, something went wrong. Please try again.';}};
+</script></body></html>

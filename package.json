@@ -1,0 +1,14 @@
+{
+  "name": "myaivalet-squeeze",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.109.0",
+    "@vercel/blob": "^2.0.0",
+    "@vercel/functions": "^2.0.0",
+    "ws": "^8.22.0"
+  },
+  "scripts": {
+    "qa": "node qa/qa.mjs"
+  }
+}
